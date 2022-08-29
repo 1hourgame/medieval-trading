@@ -1,26 +1,26 @@
-import gameOverImage from "../assets/gameover.jpeg";
-export class GameOverScene extends Phaser.Scene {
+import winImage from "../assets/win.jpeg";
+export class WinScene extends Phaser.Scene {
   constructor() {
-    super({ key: "GameOver", active: false });
+    super({ key: "Win", active: false });
   }
 
   preload() {
-    this.load.image("gameover", gameOverImage);
+    this.load.image("win", winImage);
   }
 
   create() {
     // Display game over image at the center of the screen
-    const gameOverImage = this.add.image(
+    const winImage = this.add.image(
       this.cameras.main.centerX,
       this.cameras.main.centerY,
-      "gameover"
+      "win"
     );
 
     // Display game over text at the center of the screen
     const gameOverText = this.add.text(
       this.cameras.main.centerX,
       this.cameras.main.centerY,
-      "Game Over",
+      "You win",
       {
         fontSize: "64px",
         fill: "#fff",

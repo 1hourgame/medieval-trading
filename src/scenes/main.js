@@ -16,6 +16,8 @@ const FONT_SIZE = "24px";
 
 const MAX_OWNED = 10;
 
+const WIN_COINS_TARGET = 10000;
+
 export class MainScene extends Phaser.Scene {
   constructor() {
     super({ key: "Game", active: true });
@@ -192,6 +194,11 @@ export class MainScene extends Phaser.Scene {
     if (this.ownedCommodities[index] > 0) {
       this.coins += this.price[index];
       this.ownedCommodities[index]--;
+
+      // If coins are more than WIN_COINS_TARGET, go to the win scene
+      if (this.coins >= WIN_COINS_TARGET) {
+        this.scene.start("Win");
+      }
     }
   }
 
