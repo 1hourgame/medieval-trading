@@ -14,12 +14,10 @@ const COLORS = {
 
 const config = {
   type: Phaser.AUTO,
-  parent: "meideval-trading",
   width: WIDTH,
   height: HEIGHT,
   scene: [MainScene, MapScene, GameOverScene, WinScene],
   backgroundColor: COLORS.background,
-  pixelArt: true,
 
   physics: {
     default: "arcade",
