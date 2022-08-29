@@ -18,14 +18,7 @@ const config = {
   height: HEIGHT,
   scene: [MainScene, MapScene, GameOverScene, WinScene],
   backgroundColor: COLORS.background,
-
-  physics: {
-    default: "arcade",
-    arcade: {
-      gravity: { y: 0 },
-      debug: false,
-    },
-  },
+  parent: "game",
 };
 
 const game = new Phaser.Game(config);

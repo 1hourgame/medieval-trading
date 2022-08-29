@@ -140,7 +140,6 @@ export class MainScene extends Phaser.Scene {
       // Add event listener to the buy button
       buyButton.setInteractive();
       buyButton.on("pointerdown", () => {
-        console.log("Buy button clicked", index);
         this.buyCommodity(index);
         this.updateOwnedCommoditiesTexts();
       });
@@ -153,8 +152,6 @@ export class MainScene extends Phaser.Scene {
       // Add event listener to the sell button
       sellButton.setInteractive();
       sellButton.on("pointerdown", () => {
-        console.log(sellButton);
-        console.log("Sell", index);
         this.sellCommodity(index);
         this.updateOwnedCommoditiesTexts();
       });
