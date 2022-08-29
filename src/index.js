@@ -3,6 +3,7 @@ import Phaser from "phaser";
 import { MainScene } from "./scenes/main";
 import { GameOverScene } from "./scenes/game-over";
 import { MapScene } from "./scenes/map";
+import { WinScene } from "./scenes/win";
 
 const WIDTH = 480;
 const HEIGHT = 640;
@@ -16,7 +17,7 @@ const config = {
   parent: "meideval-trading",
   width: WIDTH,
   height: HEIGHT,
-  scene: [MainScene, MapScene, GameOverScene],
+  scene: [MainScene, MapScene, GameOverScene, WinScene],
   backgroundColor: COLORS.background,
   pixelArt: true,
 
